@@ -1,6 +1,6 @@
 /**
- 
- ** Exercise 2: The lottery machine **
+
+ ** Exercise 2:  Take out the duplicates **
  Write a function called removeDuplicates. This function accept an array as an argument
  does not return anything but removes any duplicate elements from the array.
 
@@ -27,9 +27,22 @@ function checkSolution(array) {
 
 // WRITE YOUR FUNCTION HERE
 
-const letters = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c', 'b'];
-removeDuplicates(letters);
+const letters = ['a', 'b', 'b', 'c', 'd', 'a', 'e', 'f', 'f', 'c', 'b'];
+
+console.log(removeDuplicates(letters));
+
+// Method Set
+// function removeDuplicates(x) {
+//   const uniqeLetters = [...new Set(x)];
+//   return uniqeLetters;
+// }
+
+// IndexOf and filter
+
+function removeDuplicates() {
+  return letters.filter((c, index) => letters.indexOf(c) === index);
+}
 
 if (checkSolution(letters)) {
-  console.log("Hooray!");
+  console.log('Hooray!');
 }
