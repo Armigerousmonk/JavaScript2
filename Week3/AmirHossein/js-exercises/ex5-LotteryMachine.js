@@ -1,7 +1,7 @@
 /**
- 
+
  ** Exercise 5: The lottery machine **
- 
+
 Don't you just love the thrill of the lottery? What if I told you we can make our own lottery machine? Let'
  s get started!
 
@@ -28,6 +28,28 @@ Don't you just love the thrill of the lottery? What if I told you we can make ou
 
 function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
   const numbers = [];
+  for (let i = startIndex; i <= stopIndex; i++) {
+    numbers.push(i);
+  } // It adds numbers between startIndex and stopIndext to the array.
+
+  function threeCallback() {
+    for (let i = 0; i <= numbers.length; i++) {
+      if (numbers[i] % 3 === 0) {
+        return console.log('sayThree');
+      }
+    }
+    threeCallback();
+  }
+
+  function fiveCallback() {
+    for (let i = 0; i <= numbers.length; i++) {
+      if (numbers[i] % 5 === 0) {
+        return console.log('sayFive');
+      }
+    }
+    fiveCallback();
+  }
+
   // make array
   // start at beginning of array and check if you should call threeCallback or fiveCallback or go on to next
 }
