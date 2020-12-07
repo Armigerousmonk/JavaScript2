@@ -25,9 +25,9 @@ Don't you just love the thrill of the lottery? What if I told you we can make ou
  if the array value is divisible by both 3 and 5.
 
 */
-let numbers;
+
 function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
-   numbers = [];
+  const numbers = [];
   for (let i = startIndex; i <= stopIndex; i++) {
     numbers.push(i);
   } // It adds numbers between startIndex and stopIndext to the array.
