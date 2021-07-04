@@ -1,7 +1,7 @@
 /**
- 
+
  ** Exercise 4: What 's the time? **
- 
+
  Why wear a watch when you can check the time, live in your webpage ?
 
   1. Create a basic HTML file
